@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Veritabanı bağlantı ayarları -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/shoestore</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">17510067300</property>
+
+        <!-- Hibernate diğer ayarları -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Eşleştirme kaynakları -->
+        <mapping class="org.example.person"/>
+        <mapping class="org.example.customer"/>
+        <mapping class="org.example.employee"/>
+        <mapping class="org.example.shoe"/>
+        <mapping class="org.example.stockin"/>
+        <mapping class="org.example.stockused"/>
+        <mapping class="org.example.telephonenumber"/>
+        <mapping class="org.example.payment"/>
+        <mapping class="org.example.delivery"/>
+        <mapping class="org.example.supplier"/>
+    </session-factory>
+</hibernate-configuration>
